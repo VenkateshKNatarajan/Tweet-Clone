@@ -2,8 +2,19 @@
 
 {%block content%}
 
+
+<div class="jumbotron">
+    <h1 class="display-4">Hello, {{ user.username}}</h1>
+    <p class="lead">MY Tweet Clone.</p>
+    <hr class="my-4">
+    <p>Click Below To Start Tweeting.</p>
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="{% url 'tweetcreate'%}" role="button">Create</a>
+    </p>
+</div>
+
     <div class = "container">
-        {% for tweet in tweets %}
+        {% for tweet in object_list %}
 
             <br>
             <div class="card">

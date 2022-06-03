@@ -5,23 +5,22 @@
     <div class = "container">
         <div class = "col-sm-2">
             <div class = "media">
-                <img class = "rounded-circle z-depth-2" src = "{{user.profile.image.url}}">
+                <img class = "rounded-circle z-depth-2" src = "{{user.profile.image.url}}" alt = "Generic placeholder image">
             </div>
         </div>
 
         <br>
 
         <h3>{{user.username}}</h3>
-        <br><br>
-
-        <a href = "{% url 'profileupdate' %}"><button class = btn btn-outline-info>Edit</button></a>
         <br>
+        
         <div class = "card">
             <div class ="card-body">
             {{user.profile.bio}}    
             </div>
         </div>
-    </div>
+        <a href = "{% url 'profileupdate' %}"><button class = btn btn-outline-info>Edit</button></a>
+        </div>
 {%endblock content%}
 
 
